@@ -1,5 +1,23 @@
+<style media="screen">
+	.app-wraper{
+
+	}
+	header{
+		background-color: #ff6600;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 10pt;
+		color: #222222;
+		padding: .2rem;
+	}
+	.brand{
+		font-weight: bold;
+	}
+</style>
 <div class="app-wrapper">
 	<header>
+		<a href="http://www.ycombinator.com">
+			<img src="https://news.ycombinator.com/y18.gif" width="18" height="18" style="border:1px white solid;">
+		</a>
 		<span class="brand">Hacker News</span>
 	</header>
 	<List items='{{items}}'></List>
