@@ -1,8 +1,15 @@
 'use strict';
-var express = require('express');
-var serveStatic = require('serve-static');
+const path = require('path');
+const express = require('express');
+const serveStatic = require('serve-static');
+const PouchDB = require('pouchdb');
+const app = express();
 
-var app = express();
+const dataPath = path.resolve(__dirname, './db_/')
+
+var TempPouchDB = PouchDB.defaults({prefix: dataPath});
+
+app.use('/db', require('express-pouchdb')(TempPouchDB));
 
 app.use( '/dist', serveStatic(__dirname + '/dist'))
 app.use(serveStatic(__dirname + '/public'));
