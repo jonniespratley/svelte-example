@@ -1,0 +1,17 @@
+<ol class="list-ui">
+  {{#each items as item}}
+    <ListItem item='{{ item }}'></ListItem>
+  {{/each}}
+</ol>
+
+<script>
+  import ListItem from './ListItem.html';
+  export default {
+    data () {
+      return {}
+    },
+    components: {
+      ListItem
+    }
+  };
+</script>
