@@ -1,12 +1,14 @@
 # Svelte Example
 
-Some examples to test the [Svelte Framework](https://svelte.technology/).
+[![Build Status](https://travis-ci.org/jonniespratley/svelte-example.svg?branch=master)](https://travis-ci.org/jonniespratley/svelte-example)
+
+
 
 ## Installation
 
 [Yarn](https://yarnpkg.com/) is also available.
 ```
-npm install 
+npm install
 npm run build
 ```
 
