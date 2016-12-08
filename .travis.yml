@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - '6'
+services:
+  #- couchdb
+before_script:
+  #- curl -X PUT localhost:5984/passbook-server
+env:
+  - DEBUG='*'
+script:
+  - npm run build
