@@ -1,0 +1,12 @@
+---
+applications:
+  - name: hackernews-app
+    buildpack: https://github.com/cloudfoundry/heroku-buildpack-nodejs.git
+    memory: 256MB
+    stack: cflinuxfs2
+    path: .
+    command: node server.js
+    services:
+      - my_uaa_instance
+    env:
+      DEBUG: '*'

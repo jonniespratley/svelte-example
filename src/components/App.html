@@ -1,19 +1,39 @@
 <style media="screen">
-	.app-wraper{
-
-	}
-	header{
+	.hackernews header {
 		background-color: #ff6600;
 		font-family: Verdana, Geneva, sans-serif;
 		font-size: 10pt;
 		color: #222222;
 		padding: .2rem;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
 	}
-	.brand{
+
+	.hackernews header .brand {
+		margin-left: .2rem;
+	}
+
+	.hackernews .list-item a {
+		color: #333;
+		text-decoration: none;
+	}
+
+	.hackernews .list-item__body {
+		font-size: .8rem;
+		color: #888;
+	}
+
+	.brand {
 		font-weight: bold;
 	}
 </style>
-<div class="app-wrapper">
+<div class="hackernews app-wrapper">
 	<header>
 		<a href="http://www.ycombinator.com">
 			<img src="https://news.ycombinator.com/y18.gif" width="18" height="18" style="border:1px white solid;">
@@ -22,15 +42,14 @@
 	</header>
 	<List items='{{items}}'></List>
 </div>
-
 <script>
-  import List from './List.html';
-  export default {
-    data () {
-      return {}
-    },
-    components: {
-      List
-    }
-  };
+	import List from './List.html';
+	export default {
+		data() {
+			return {}
+		},
+		components: {
+			List
+		}
+	};
 </script>
